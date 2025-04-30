@@ -4,7 +4,7 @@ const Speech = () => {
             <div className="bubble">
                 Lorem, ipsum.
             </div>
-            <img src="../../../../public/static/svgs/IG_Solutions.svg" alt="Logo da IG Solutions" />
+            <img src="/public/static/images/IG_Solutions.png" alt="" />
         </div>
     )
 }

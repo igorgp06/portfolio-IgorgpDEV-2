@@ -21,7 +21,7 @@ const Hero = () => {
                         </a>
                     </div>
                 </div>
-                <a href="#services">
+                <a href="#services" className="arrowDown">
                     <img src="/public/static/svgs/arrow-down.svg" alt="rolar para a seção de serviços" />
                 </a>
             </div>
@@ -38,8 +38,11 @@ const Hero = () => {
                         <img src="/public/static/svgs/laptop.svg" alt="Seção de portifólio e projetos" />
                     </a>
                     <a href="#contact">
-                        <img src="/public/static/svgs/linkedin.svg" alt="Seção de contato" />
+                        <img src="/public/static/svgs/telephone.svg" alt="Seção de contato" />
                     </a>
+                    <div className="menuTextContainer">
+                        <div className="menuText">MENU</div>
+                    </div>
                 </div>
                 <Speech />
                 <a href="#contact">
