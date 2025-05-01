@@ -2,53 +2,100 @@ import "./hero.css"
 import "./Particles.jsx"
 import Speech from "./Speech"
 // import ParticlesJS from "./Particles.jsx"
+import { motion } from "motion/react"
+
+const awardsVariantes = {
+    initial: {
+        x: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            staggerChildren: 0.3
+        },
+    },
+}
+
+const menuVariantes = {
+    initial: {
+        y: -100,
+        opacity: 0,
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.3
+        },
+    },
+}
 
 const Hero = () => {
     return (
         <div className="hero">
             <div className="hSection left">
-                <h1 className="hero-titile">Igor Gonçalves <span>| DEV</span></h1>
-                <div className="awards">
-                    <h2>Desenvolvedor Web</h2>
-                    <p>A mais de 2 anos trabalhando com o desenvolvimento web, entregando soluções únicas e inovadoras.</p>
-                    <div className="socialMedias">
-                        <a href="https://www.linkedin.com/in/igorgpdev/" target="_blank">
-                            <img src="/public/static/svgs/linkedin.svg" alt="Veja meu perfil no Linkedin" />
-                        </a>
-                        <a href="https://github.com/igorgp06" target="_blank">
-                            <img src="/public/static/svgs/github.svg" alt="Veja meu perfil no github" />
-                        </a>
-                        <a href="https://www.instagram.com/igorgp.06" target="_blank">
-                            <img src="/public/static/svgs/instagram.svg" alt="Veja meu perfil no instagram" />
-                        </a>
-                    </div>
-                </div>
-                <a href="#services" className="arrowDown">
-                    <img src="/public/static/svgs/arrow-down.svg" alt="rolar para a seção de serviços" />
-                </a>
+                <motion.h1
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className="hero-titile">
+                    Igor Gonçalves<span>| DEV</span>
+                </motion.h1>
+                <motion.div variants={awardsVariantes} initial="initial" animate="animate" className="awards">
+                    <motion.h2 variants={awardsVariantes} >Desenvolvedor Web</motion.h2>
+                    <motion.p variants={awardsVariantes} >A mais de 2 anos trabalhando com o desenvolvimento web, entregando soluções únicas e inovadoras.</motion.p>
+                    <motion.div variants={awardsVariantes} className="socialMedias">
+                        <motion.a variants={awardsVariantes} href="https://www.linkedin.com/in/igorgpdev/" target="_blank">
+                            <img src="/static/svgs/linkedin.svg" alt="Veja meu perfil no Linkedin" />
+                        </motion.a>
+                        <motion.a variants={awardsVariantes} href="https://github.com/igorgp06" target="_blank">
+                            <img src="/static/svgs/github.svg" alt="Veja meu perfil no github" />
+                        </motion.a>
+                        <motion.a variants={awardsVariantes} href="https://www.instagram.com/igorgp.06" target="_blank">
+                            <img src="/static/svgs/instagram.svg" alt="Veja meu perfil no instagram" />
+                        </motion.a>
+                    </motion.div>
+                </motion.div>
+                <motion.a
+                    animate={{ y: [0, 5], opacity: [0, 1, 0] }}
+                    transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                    href="#services" className="arrowDown">
+                    <img src="/static/svgs/arrow-down.svg" alt="rolar para a seção de serviços" />
+                </motion.a>
             </div>
 
             <div className="hSection right">
-                <div className="menu">
-                    <a href="#hero">
-                        <img src="/public/static/svgs/house.svg" alt="Seção inicial" />
-                    </a>
-                    <a href="#services">
-                        <img src="/public/static/svgs/tools.svg" alt="Seção de serviços" />
-                    </a>
-                    <a href="#portfolio">
-                        <img src="/public/static/svgs/laptop.svg" alt="Seção de portifólio e projetos" />
-                    </a>
-                    <a href="#contact">
-                        <img src="/public/static/svgs/telephone.svg" alt="Seção de contato" />
-                    </a>
-                    <div className="menuTextContainer">
+                <motion.div variants={menuVariantes} initial="initial" animate="animate" className="menu">
+                    <motion.a variants={menuVariantes} href="#hero">
+                        <img src="/static/svgs/house.svg" alt="Seção inicial" />
+                    </motion.a>
+                    <motion.a variants={menuVariantes} href="#services">
+                        <img src="/static/svgs/tools.svg" alt="Seção de serviços" />
+                    </motion.a>
+                    <motion.a variants={menuVariantes} href="#portfolio">
+                        <img src="/static/svgs/laptop.svg" alt="Seção de portifólio e projetos" />
+                    </motion.a>
+                    <motion.a variants={menuVariantes} href="#contact">
+                        <img src="/static/svgs/telephone.svg" alt="Seção de contato" />
+                    </motion.a>
+                    <motion.div variants={menuVariantes} className="menuTextContainer">
                         <div className="menuText">MENU</div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
                 <Speech />
-                <a href="#contact" className="contactLink">
-                    <div className="contactButton">
+                <motion.a href="#contact" className="contactLink"
+                    animate={{
+                        x: [200, 0],
+                        opacity: [0, 1]
+                    }}
+                    transition={{ duration: 1.8 }}>
+                    <motion.div className="contactButton"
+                        animate={{ rotate: [0, 360] }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}>
                         <svg viewBox="0 0 200 200" width="150" height="150">
                             <circle cx="100" cy="100" r="90" fill="#c291f2" />
                             <path
@@ -60,7 +107,7 @@ const Hero = () => {
                                 <textPath href="#innerCirclePath">Me contrate •</textPath>
                             </text>
                             <text className="circleText">
-                                <textPath href="#innerCirclePath" startOffset="44%">          Contate-me •
+                                <textPath href="#innerCirclePath" startOffset="44%">Contate-me •
                                 </textPath>
                             </text>
                         </svg>
@@ -77,8 +124,8 @@ const Hero = () => {
                                 <polyline points="9 6 18 6 18 15" />
                             </svg>
                         </div>
-                    </div>
-                </a>
+                    </motion.div>
+                </motion.a>
             </div>
 
             {/* 

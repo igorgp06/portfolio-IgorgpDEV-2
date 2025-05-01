@@ -1,10 +1,10 @@
-import { TypeAnimation } from "react-type-animation"
 import "./speech.css"
-
+import { TypeAnimation } from "react-type-animation"
+import { motion } from "motion/react"
 
 const Speech = () => {
     return (
-        <div className="bubbleContainer">
+        <motion.div className="bubbleContainer" animate={{ opacity: [0, 1] }} transition={{ duration: 1 }}>
             <div className="bubble">
                 <TypeAnimation
                     sequence={[
@@ -23,8 +23,10 @@ const Speech = () => {
                     repeat={Infinity}
                 />
             </div>
-            <img src="/public/static/images/IG_Solutions.png" alt="Logo da IG Solutions" className="speechImg" />
-        </div>
+            <motion.img src="/static/images/IG_Solutions.png" alt="Logo da IG Solutions" className="speechImg"
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }} />
+        </motion.div>
     )
 }
 
