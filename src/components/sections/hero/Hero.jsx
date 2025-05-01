@@ -1,5 +1,7 @@
 import "./hero.css"
+import "./Particles.jsx"
 import Speech from "./Speech"
+// import ParticlesJS from "./Particles.jsx"
 
 const Hero = () => {
     return (
@@ -45,7 +47,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <Speech />
-                <a href="#contact">
+                <a href="#contact" className="contactLink">
                     <div className="contactButton">
                         <svg viewBox="0 0 200 200" width="150" height="150">
                             <circle cx="100" cy="100" r="90" fill="#c291f2" />
@@ -58,8 +60,7 @@ const Hero = () => {
                                 <textPath href="#innerCirclePath">Me contrate •</textPath>
                             </text>
                             <text className="circleText">
-                                <textPath href="#innerCirclePath" startOffset="44%">
-                                    Contate-me •
+                                <textPath href="#innerCirclePath" startOffset="44%">          Contate-me •
                                 </textPath>
                             </text>
                         </svg>
@@ -71,8 +72,7 @@ const Hero = () => {
                                 height="50"
                                 fill="none"
                                 stroke="black"
-                                strokeWidth="2"
-                            >
+                                strokeWidth="2">
                                 <line x1="6" y1="18" x2="18" y2="6" />
                                 <polyline points="9 6 18 6 18 15" />
                             </svg>
@@ -81,6 +81,15 @@ const Hero = () => {
                 </a>
             </div>
 
+            {/* 
+            
+            <div className="heroBg">
+                <div className="particlesContainer">
+                    <ParticlesJS />
+                </div>
+            </div>
+            
+            */}
         </div>
     )
 }

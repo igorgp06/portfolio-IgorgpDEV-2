@@ -7,19 +7,19 @@ const App = () => {
   return (
     <div className='container'>
       
-      <section id='#hero'>
+      <section id='hero'>
         <Hero />
       </section>
 
-      <section  id='#services'>
+      <section  id='services'>
         <Services />
       </section>
 
-      <section id='#portfolio'>
+      <section id='portfolio'>
         <Portfolio />
       </section>
 
-      <section id='#contact'>
+      <section id='contact'>
         <Contact />
       </section>
 

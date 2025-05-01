@@ -86,3 +86,49 @@
     align-items: center;
     border-bottom-right-radius: 10px;
 }
+
+.contactLink {
+    margin-bottom: 50px;
+}
+
+.contactButton {
+    position: relative;
+}
+
+.circleText {
+    letter-spacing: 0.8px;
+    font-size: 20px;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.particlesContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 80%;
+    width: max-content;
+}
