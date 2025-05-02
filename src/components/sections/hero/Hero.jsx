@@ -1,8 +1,9 @@
-import "./hero.css"
-import "./Particles.jsx"
-import Speech from "./Speech"
-// import ParticlesJS from "./Particles.jsx"
-import { motion } from "motion/react"
+import "./hero.css";
+import Speech from "./Speech";
+import Background from "./Background.jsx";
+import { motion } from "motion/react";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 
 const awardsVariantes = {
     initial: {
@@ -37,6 +38,7 @@ const menuVariantes = {
 const Hero = () => {
     return (
         <div className="hero">
+            <div className="cursor"/>
             <div className="hSection left">
                 <motion.h1
                     initial={{ y: -100, opacity: 0 }}
@@ -128,15 +130,13 @@ const Hero = () => {
                 </motion.a>
             </div>
 
-            {/* 
-            
             <div className="heroBg">
-                <div className="particlesContainer">
-                    <ParticlesJS />
-                </div>
+                <Canvas>
+                    <Suspense fallback="Carregando...">
+                        <Background />
+                    </Suspense>
+                </Canvas>
             </div>
-            
-            */}
         </div>
     )
 }

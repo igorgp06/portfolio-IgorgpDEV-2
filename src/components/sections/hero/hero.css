@@ -123,16 +123,6 @@
     z-index: -1;
 }
 
-.particlesContainer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 80%;
-    width: max-content;
-}
-
 @media (max-width: 1536px) {
     .hero-titile {
         font-size: 3.3rem
