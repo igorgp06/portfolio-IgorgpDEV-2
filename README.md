@@ -18,6 +18,13 @@ O projeto segue o seguinte padrão de sufixos:
 | [FIX]    | Correção de falhas.                                                     |
 | [DEPLOY] | Relacionado ao primeiro o deploy do projeto. Pode ser usado uma vez só. |
 
+## Lançamentos Futuros
+
+- Um mouse personalizado para o site junto com uma animação de rastro para ele.  
+- Interatividade com diversos elementos 3D presentes no site.   
+- Otimizações de SEO, carregamento e otimizações no geral.  
+
+
 ## Bugs
 
 Problemas/Bugs encontrados ao decorrer do desenvolvimento do projeto serão listados aqui com o seu ID, uma breve descrição, a versão em que foi encontrado e em qual versão foi solucionado.
