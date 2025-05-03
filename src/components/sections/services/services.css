@@ -14,4 +14,87 @@
     flex-direction: column;
     justify-content: center;
 }
-    
+
+.services-title {
+    font-size: 60px;
+    margin-bottom: 24px;
+}
+
+.serviceList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.service {
+    width: 75%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #cab4d9a6;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.serviceIcon {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceIcon img {
+    width: 26px;
+    height: 26px;
+}
+
+.serviceInfo h2 {
+    font-size: 18px;
+    font-weight: 525;
+    margin-bottom: 8px;
+}
+
+.serviceInfo p {
+    font-size: 14px;
+    font-weight: 475;
+    color: rgba(0, 0, 0, 0.900);
+}
+
+.service:nth-child(1) .serviceIcon {
+    background-color: #d2a3f1;
+}
+
+.service:nth-child(2) .serviceIcon {
+    background-color: #c291f2;
+}
+
+.service:nth-child(3) .serviceIcon {
+    background-color: #ae7ef2;
+}
+
+.counterList {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.counter h1 {
+    font-size: 42px;
+    color: var(--color-5);
+}
+
+.counter p {
+    font-size: 13px;
+}
+

@@ -23,7 +23,7 @@ O projeto segue o seguinte padrão de sufixos:
 - Um mouse personalizado para o site junto com uma animação de rastro para ele.  
 - Interatividade com diversos elementos 3D presentes no site.   
 - Otimizações de SEO, carregamento e otimizações no geral.  
-
+- Animações do hover em diferentes elementos do site.
 
 ## Bugs
 
