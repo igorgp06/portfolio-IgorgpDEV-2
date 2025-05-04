@@ -1,6 +1,42 @@
 import "./services.css"
 import Counter from "./Counter";
-import ComputerModelContainer from "./models/ComputerModelContainer"
+import ComputerModelContainer from "./models/default/ComputerModelContainer"
+import StatisticArrowContainer from "./models/StatisticArrow/StatisticArrowContainer";
+import EnderChestContainer from "./models/EnderChest/EnderChestContaiern";
+import GamerLaptop from "./models/gamerleptop/GamerLaptopContainer";
+import { motion, useInView } from "motion/react";
+import { useRef, useState } from "react";
+
+const textVariantes = {
+    initial: {
+        x: -100,
+        y: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+        },
+    },
+}
+
+const listVariantes = {
+    initial: {
+        x: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            staggerChildren: 0.4,
+        },
+    },
+}
 
 const servicesData = [
     {
@@ -24,13 +60,32 @@ const servicesData = [
 ];
 
 const Services = () => {
+
+    const [currentServiceId, setCurrentServiceId] = useState(0);
+
+    const ref = useRef();
+
+    const inView = useInView(ref, { margin: "-200px" });
+
     return (
-        <div className="services">
+        <div className="services" ref={ref}>
             <div className="sSection left">
-                <h1 className="services-title">Como posso ajudar?</h1>
-                <div className="serviceList">
+                <motion.h1
+                    variants={textVariantes}
+                    animate={inView ? "animate" : "initial"}
+                    className="services-title">
+                    Como Posso Ajudar?
+                </motion.h1>
+                <motion.div
+                    variants={listVariantes}
+                    animate={inView ? "animate" : "initial"}
+                    className="serviceList">
                     {servicesData.map((service) => (
-                        <div className="service" key={service.id}>
+                        <motion.div
+                            className="service"
+                            key={service.id}
+                            variants={listVariantes}
+                            onClick={() => setCurrentServiceId(service.id)}>
                             <div className="serviceIcon">
                                 <img src={service.img} alt="Logo do serviço oferecido" />
                             </div>
@@ -38,17 +93,18 @@ const Services = () => {
                                 <h2>{service.title}</h2>
                                 <p>{service.description}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
                 <div className="counterList">
                     <Counter from={0} to={24} text="Projetos Concluidos" />
                     <Counter from={0} to={47} text="Ferramentas Utilizadas" />
                 </div>
             </div>
 
-            <div className="sSection right">
-                <ComputerModelContainer />
+            <div className="sSection right"> {
+                    currentServiceId === 0 ? (<ComputerModelContainer />) : currentServiceId === 1 ? (<GamerLaptop />) : currentServiceId === 2 ? (<EnderChestContainer />) : currentServiceId === 3 ? (<StatisticArrowContainer />) : null
+                }
             </div>
         </div>
     )

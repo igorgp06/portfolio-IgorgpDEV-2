@@ -7,7 +7,7 @@ const ComputerModelContainer = () => {
     return (
         <Canvas>
             <Suspense fallback="Cargando...">
-                <Stage environment="studio" intensity={0.2} >
+                <Stage environment="sunset" intensity={0.2} >
                     <ComputerModel />
                 </Stage>
                 <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5} enablePan={false} />
