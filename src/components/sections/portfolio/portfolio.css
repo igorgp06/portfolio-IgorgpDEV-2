@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 75px;
+    gap: 85px;
 }
 
 .pImg {
@@ -41,7 +41,7 @@
     width: 40%;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
 }
 
 .pText h1 {
@@ -75,4 +75,47 @@
 
 .pItem:nth-child(6) {
     background: linear-gradient(to right, #ae7ef2, transparent);
+}
+
+.pProgress {
+    position: sticky;
+    width: 80px;
+    width: 80px;
+    left: 0;
+    bottom: 80%;
+}
+
+@media (max-width: 1536px) {
+    .pItem {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .pText h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pItem {
+        flex-direction: column;
+    }
+
+    .pImg,
+    .pText {
+        width: 80%;
+    }
+
+    .pProgress {
+        bottom: 100px;
+        left: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pProgress {
+        width: 50px;
+        height: 50px;
+    }
 }
