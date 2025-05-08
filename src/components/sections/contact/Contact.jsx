@@ -6,11 +6,13 @@ import ContactSvg from "./ContactSvg";
 
 const listVariant = {
     initial: {
-        x: 100,
+        x: -100,
+        y: 100,
         opacity: 0,
     },
     animate: {
         x: 0,
+        y: 0,
         opacity: 1,
         transition: {
             duration: 0.6,
@@ -92,7 +94,7 @@ const Contact = () => {
                 </motion.form>
             </div>
             <div className="cSection">
-                    <ContactSvg />
+                <ContactSvg />
             </div>
         </div>
     );
