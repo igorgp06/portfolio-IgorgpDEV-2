@@ -36,6 +36,11 @@
     align-items: center;
     gap: 12px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.service:hover {
+    background-color: #cab4d9;
 }
 
 .serviceIcon {
@@ -94,11 +99,18 @@
     font-size: 42px;
     color: var(--color-5);
     font-weight: 700;
+    transition: color 0.3s ease-in-out;
 }
 
 .counter p {
     font-size: 14px;
     font-weight: 550;
+    transition: color 0.3s ease-in-out;
+}
+
+.counter:hover h1,
+.counter:hover p {
+    color: var(--color-3);
 }
 
 @media (max-width: 1536px) {

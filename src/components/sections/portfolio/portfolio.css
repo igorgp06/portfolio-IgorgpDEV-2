@@ -27,8 +27,13 @@
 
 .pImg {
     width: 40%;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
+    transition: width 0.3s ease-in-out;
+}
+
+.pImg:hover {
+    width: 42%;
 }
 
 .pImg img {
@@ -45,20 +50,29 @@
 }
 
 .pText h1 {
-    font-size: 56px;
+    font-size: 50px;
 }
 
 .pText p {
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
 
 .pText button {
     background-color: var(--color-3);
-    padding: 12px;
+    padding: 16px;
     border-radius: 10px;
     border: none;
     font-weight: 500;
     cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.pText button:hover {
+    background-color: var(--color-4);
+    color: var(--color-5);
+    transform: scale(1.1);
 }
 
 .pItem:nth-child(3) {
