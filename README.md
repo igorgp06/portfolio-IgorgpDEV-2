@@ -10,7 +10,7 @@ O projeto segue o seguinte padrão de sufixos:
 | -------- | ----------------------------------------------------------------------- |
 | [ADD]    | Adição de algo novo para o projeto, sem remoções consideráveis.         |
 | [WORK]   | Versão em desenvolvimento, sujeita a alterações.                        |
-| [FINAL]  | Indica a versão final de uma seção (exemplo: "[FINAL] 1.6").            |
+| [FINAL]  | Indica a versão final do projeto (ainda sujeita a alterações no geral). |
 | [DEL]    | Remoção de pastas, linhas de código, imagens, etc.                      |
 | [UPDATE] | Melhorias de performance, refatorações, etc.                            |
 | [PATCH]  | Correção de algo que funcionava, mas de forma inadequada.               |

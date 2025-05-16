@@ -159,7 +159,7 @@ const Portfolio = () => {
                         r="70"
                         fill="none"
                         stroke="#f2efeb"
-                        strokeWidth={20}
+                        strokeWidth={18}
                     />
                     <motion.circle
                         cx="80"

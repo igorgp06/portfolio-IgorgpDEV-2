@@ -3,7 +3,7 @@
 /* seção portfolio */
 
 .portfolio {
-    width: 500vh;
+    width: 600vh;
     position: relative;
 }
 
@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 60px;
 }
 
 .pImg {
@@ -71,6 +71,7 @@
 
 .pItem:nth-child(5) {
     background: linear-gradient(to right, #c291f2, #ae7ef2);
+    width: 95vw;
 }
 
 .pItem:nth-child(6) {

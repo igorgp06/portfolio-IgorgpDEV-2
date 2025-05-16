@@ -18,13 +18,13 @@ const App = () => {
       <Suspense fallback={"Cargando..."}>
         <section id='services'>
           <Services />
-        </section>
+        </section> {" "}
       </Suspense>
 
       <Suspense fallback={"Cargando..."}>
         {/* <section id='portfolio'> */}
         <Portfolio />
-        {/* </section> */}
+        {/* </section> */} {" "}
       </Suspense>
 
       <Suspense fallback={"Cargando..."}>
