@@ -1,40 +1,19 @@
-import { lazy, Suspense } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Hero } from "./components/hero/Hero"
+import { NotFound } from "./pages/err/NotFound"
 
-const Hero = lazy(() => import("./components/sections/hero/Hero"))
-const Services = lazy(() => import("./components/sections/services/Services"))
-const Portfolio = lazy(() => import("./components/sections/portfolio/Portfolio"))
-const Contact = lazy(() => import("./components/sections/contact/Contact"))
-
-const App = () => {
+function App() {
   return (
-    <div className='container'>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={ <Hero /> }/>
+          <Route path="*" element={ <NotFound /> }/>
 
-      <Suspense fallback={"Cargando..."}>
-        <section id='hero'>
-          <Hero />
-        </section>
-      </Suspense>
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
 
-      <Suspense fallback={"Cargando..."}>
-        <section id='services'>
-          <Services />
-        </section> {" "}
-      </Suspense>
-
-      <Suspense fallback={"Cargando..."}>
-        <section id='portfolio'>
-          <Portfolio />
-        </section> {" "}
-      </Suspense>
-
-      <Suspense fallback={"Cargando..."}>
-        <section id='contact'>
-          <Contact />
-        </section>
-      </Suspense>
-
-    </div>
-  );
-};
-
-export default App;
+export default App
