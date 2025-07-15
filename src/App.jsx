@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Hero } from "./components/hero/Hero"
+import { Main } from "./pages/main/Main"
 import { NotFound } from "./pages/err/NotFound"
 
 function App() {
@@ -7,8 +7,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={ <Hero /> }/>
-          <Route path="*" element={ <NotFound /> }/>
+          <Route index element={<Main />} />
+          <Route path="*" element={<NotFound />} />
 
         </Routes>
       </BrowserRouter>

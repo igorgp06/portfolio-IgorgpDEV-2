@@ -1,0 +1,19 @@
+import { ThemeToggle } from "../../components/utils/theme/ThemeToggle";
+import { Navbar } from "../../components/navbar/Navbar";
+import { StarBackground } from "../../components/utils/bg/StarBackGround";
+import { Hero } from "../../components/hero/Hero"
+
+export const Main = () => {
+    return (
+        <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+            <ThemeToggle />
+            <StarBackground />
+            <Navbar />
+            <Hero />
+
+
+        </div>
+    )
+}
+
+export default Main
