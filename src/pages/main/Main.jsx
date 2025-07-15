@@ -1,7 +1,8 @@
 import { ThemeToggle } from "../../components/utils/theme/ThemeToggle";
 import { Navbar } from "../../components/navbar/Navbar";
 import { StarBackground } from "../../components/utils/bg/StarBackGround";
-import { Hero } from "../../components/hero/Hero"
+import { Hero } from "../../components/hero/Hero";
+import { About } from "../../components/about/About";
 
 export const Main = () => {
     return (
@@ -9,8 +10,11 @@ export const Main = () => {
             <ThemeToggle />
             <StarBackground />
             <Navbar />
-            <Hero />
 
+            <main>
+                <Hero />
+                <About />
+            </main>
 
         </div>
     )

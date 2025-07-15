@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 
 export const Hero = () => {
     return (
-        <div className="relative min-h-screen flex flex-col align-center justify-center px-4" id="hero">
+        <section className="relative min-h-screen flex flex-col align-center justify-center px-4" id="hero">
 
             <div className="container max-w-4xl mx-auto text-center z-10">
                 <div className="space-y-6">
@@ -21,7 +21,7 @@ export const Hero = () => {
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                        <a href="#projects" className="cosmic-button">
+                        <a href="#projects" className="cosmic-button hover-shadow-violet">
                             Veja meus Projetos
                         </a>
                     </div>
@@ -33,6 +33,6 @@ export const Hero = () => {
                 <ArrowDown className="h-5 w-5 text-primary text-primary" />
             </div>
 
-        </div>
+        </section>
     )
 }
