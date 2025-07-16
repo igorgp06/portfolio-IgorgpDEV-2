@@ -3,6 +3,7 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { StarBackground } from "../../components/utils/bg/StarBackGround";
 import { Hero } from "../../components/hero/Hero";
 import { About } from "../../components/about/About";
+import { Skills } from "../../components/Skills/Skills";
 
 export const Main = () => {
     return (
@@ -14,6 +15,7 @@ export const Main = () => {
             <main>
                 <Hero />
                 <About />
+                <Skills />
             </main>
 
         </div>
