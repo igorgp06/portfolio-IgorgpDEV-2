@@ -8,12 +8,14 @@ export const Hero = () => {
                 <div className="space-y-6">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white">
                         <span className="opacity-0 animate-fade-in-delay-1"> Olá, eu sou o</span>
-                        <span className="text-primary opacity-0 animate-fade-in-delay-2">
+                        <span className="text-gradient opacity-0 animate-fade-in-delay-2">
                             {" "}
-                            Igor Gonçalves</span>
-                        <span className="text-gradient opacity-0 animate-fade-in-delay-3">
+                            Igor Gonçalves 
+                        </span> 
+                        <span className="text-primary opacity-0 animate-fade-in-delay-3">
                             {" "}
-                            | DEV Freelancer</span>
+                            | DEV Freelancer
+                        </span>
                     </h1>
 
                     <p className="text-lg md:ext-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
