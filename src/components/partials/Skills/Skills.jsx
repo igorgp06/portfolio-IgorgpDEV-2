@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 const skills = [
     { img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", name: "HTML", category: "frontend" },
