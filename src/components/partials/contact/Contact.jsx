@@ -1,15 +1,26 @@
 import { MailIcon, MapPin, SendIcon } from "lucide-react"
 import { cn } from "../../../lib/utils";
+import { useToast } from "../../../hooks/use-toast";
+import { useState } from "react";
 
 export const Contact = () => {
+
+    const { toast } = useToast();
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setTimeout(() => {
+        setIsSubmitting(true);
 
-        }, 7200)
-    }
+        setTimeout(() => {
+            toast({
+                title: "Mensagem Enviada!",
+                description: "Obrigado por entrar em contato comigo, irei responder assim que possivel.",
+            });
+            setIsSubmitting(false);
+        }, 1500);
+    };
 
     return (
         <section className="py-24 px-4 relative bg-secondary/30" id="contact">
@@ -52,6 +63,16 @@ export const Contact = () => {
                                     </a>
                                 </div>
                             </div>
+
+                            <div className="flex items-start space-x-4">
+                                <div>
+                                    <p className="font-medium text-center">
+                                        Ou envie uma mensagem diretamente pelo formulário presente na seção! 
+                                        Me conte um pouco sobre a sua ideia ou projeto para conversarmos sobre 
+                                        como podemos por em prática.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="pt-8">
@@ -81,7 +102,7 @@ export const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="bg-card p-8 rounded-lg shadow-xs">
+                    <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
                         <h3 className="text-2xl font-semibold mb-6">Me mande uma mensagem!</h3>
 
                         <form className="space-y-6">
@@ -118,10 +139,14 @@ export const Contact = () => {
                                     placeholder="Descreva aqui a sua ideia ou sugestão de projeto!" rows="3" />
                             </div>
 
-                            <button type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2",
-                                ""
-                            )}>
-                                Enviar Mensagem
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className={cn(
+                                    "cosmic-button w-full flex items-center justify-center gap-2"
+                                )}
+                            >
+                                {isSubmitting ? "Enviando..." : "Enviar mensagem"}
                                 <SendIcon size={20} />
                             </button>
                         </form>
