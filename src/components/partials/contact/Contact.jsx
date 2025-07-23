@@ -184,7 +184,8 @@ export const Contact = () => {
                                 type="submit"
                                 disabled={isSubmitting}
                                 className={cn(
-                                    "cosmic-button w-full flex items-center justify-center gap-2"
+                                    "cosmic-button w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md transition-colors duration-300",
+                                    "bg-primary text-primary-foreground hover:bg-primary/80 cursor-pointer"
                                 )}
                             >
                                 {isSubmitting ? "Enviando..." : "Enviar mensagem"}

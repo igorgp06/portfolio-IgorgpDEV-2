@@ -1,0 +1,2 @@
+User-agent: *
+https://igdeveloper.com.br/sitemap.xml
