@@ -58,11 +58,19 @@
     @keyframes meteor {
         0% {
             transform: rotate(215deg) translateX(0);
+            opacity: 0;
+        }
+
+        30%{
+            opacity: 0.5;
+        }
+
+        55% {
             opacity: 1;
         }
 
         70% {
-            opacity: 1;
+            opacity: 0.5;
         }
 
         100% {

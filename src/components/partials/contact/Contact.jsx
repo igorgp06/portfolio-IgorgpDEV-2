@@ -1,32 +1,64 @@
 import { MailIcon, MapPin, SendIcon } from "lucide-react"
 import { cn } from "../../../lib/utils";
 import { useToast } from "../../../hooks/use-toast";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 export const Contact = () => {
-
+    const form = useRef();
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
+
+        if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+            console.error("Erro interno no emailjs: Verifique as variáveis de ambiente.");
+            toast({
+                title: "Erro interno no emailjs",
+                description: "Verifique as variáveis de ambiente do emailjs.",
+                variant: "destructive",
+            });
+            return;
+        }
 
         setIsSubmitting(true);
 
-        setTimeout(() => {
-            toast({
-                title: "Mensagem Enviada!",
-                description: "Obrigado por entrar em contato comigo, irei responder assim que possivel.",
+        emailjs
+            .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then(
+                (result) => {
+                    console.log("SUCESSO!", result.text);
+                    toast({
+                        title: "Mensagem enviada com sucesso!",
+                        description: "Obrigado por entrar em contato. Responderei o mais breve possivel.",
+                        variant: "success",
+                    });
+                    e.target.reset();
+                },
+                (error) => {
+                    console.error("ERRO:", error.text);
+                    toast({
+                        title: "Erro ao enviar mensagem",
+                        description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+                        variant: "destructive",
+                    });
+                }
+            )
+            .finally(() => {
+                setIsSubmitting(false);
             });
-            setIsSubmitting(false);
-        }, 1500);
     };
 
     return (
         <section className="py-24 px-4 relative bg-secondary/30" id="contact">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Entre em
-                    <span className="text-primary">Contato</span>
+                    <span className="text-primary"> Contato</span>
                 </h2>
 
                 <p className="text-center text-muted-foreground mb-12 mx-auto">
@@ -102,41 +134,50 @@ export const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+                    <div className="bg-card p-8 rounded-lg shadow-xs">
                         <h3 className="text-2xl font-semibold mb-6">Me mande uma mensagem!</h3>
 
-                        <form className="space-y-6">
+                        <form className="space-y-6" ref={form} onSubmit={sendEmail}>
                             <div>
                                 <label htmlFor="name" className="block text-md font-medium mb-2">
-                                    {" "}
-                                    Seu Nome</label>
-                                <input type="text"
+                                    Seu Nome
+                                </label>
+                                <input
+                                    type="text"
                                     id="name"
+                                    name="name"
                                     required
-                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                                    placeholder="Digite aqui o seu nome" />
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                                    placeholder="Digite aqui o seu nome"
+                                />
                             </div>
 
                             <div>
                                 <label htmlFor="email" className="block text-md font-medium mb-2">
-                                    {" "}
-                                    Seu Email</label>
-                                <input type="email"
+                                    Seu Email
+                                </label>
+                                <input
+                                    type="email"
                                     id="email"
+                                    name="email"
                                     required
-                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                                    placeholder="exemplo@exemplo.com" />
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                                    placeholder="exemplo@exemplo.com"
+                                />
                             </div>
 
                             <div>
                                 <label htmlFor="message" className="block text-md font-medium mb-2">
-                                    {" "}
-                                    Me mande uma mensagem</label>
-                                <textarea type="message"
+                                    Sua Mensagem
+                                </label>
+                                <textarea
                                     id="message"
+                                    name="message"
                                     required
-                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
-                                    placeholder="Descreva aqui a sua ideia ou sugestão de projeto!" rows="3" />
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                                    placeholder="Descreva aqui a sua ideia ou sugestão de projeto!"
+                                    rows="3"
+                                />
                             </div>
 
                             <button
@@ -154,5 +195,5 @@ export const Contact = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
