@@ -1,4 +1,4 @@
-import { MailIcon, MapPin, SendIcon } from "lucide-react"
+import { MailIcon, MapPin, SendIcon, PhoneCallIcon } from "lucide-react"
 import { cn } from "../../../lib/utils";
 import { useToast } from "../../../hooks/use-toast";
 import { useState, useRef } from "react";
@@ -73,13 +73,26 @@ export const Contact = () => {
                         <h3 className="text-2xl font-semibold mb-6">Informações de Contato</h3>
 
                         <div className="space-y-6">
+
+                            <div className="flex items-start space-x-4">
+                                <div className="p-3 rounded-full bg-primary/10">
+                                    <PhoneCallIcon className="w-6 h-6 text-primary" /> {" "}
+                                </div>
+                                <div>
+                                    <h4 className="font-medium text-start">Telefone</h4>
+                                    <a href="https://wa.me/5548920014986" target="_blank" className="text-muted-foreground hover:text-primary transition-colors duration-300 underline">
+                                        +55 (48) 920014986
+                                    </a>
+                                </div>
+                            </div>
+
                             <div className="flex items-start space-x-4">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <MailIcon className="w-6 h-6 text-primary" /> {" "}
                                 </div>
                                 <div>
                                     <h4 className="font-medium text-start">Email</h4>
-                                    <a href="mailto:contato@igdeveloper.com.br" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+                                    <a href="mailto:contato@igdeveloper.com.br" className="text-muted-foreground hover:text-primary transition-colors duration-300 underline">
                                         contato@igdeveloper.com.br
                                     </a>
                                 </div>
@@ -91,7 +104,7 @@ export const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-medium text-start">Localização</h4>
-                                    <a href="https://maps.app.goo.gl/grnEepkGwuXavEDM7" target="_blank" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+                                    <a href="https://maps.app.goo.gl/grnEepkGwuXavEDM7" target="_blank" className="text-muted-foreground hover:text-primary transition-colors duration-300 underline">
                                         Imbituba, Santa Catarina - Brasil
                                     </a>
                                 </div>
@@ -194,7 +207,7 @@ export const Contact = () => {
                             </button>
 
                                 <div className="mt-4 text-center text-muted-foreground text-sm politics">
-                                    <p>Ao enviar uma mensagem, voce concorda com:</p>
+                                    <p>Ao enviar uma mensagem, você concorda com:</p>
                                     <Link to={"/politica-de-privacidade"} className="text-primary">Política de Privacidade</Link>
                                     <span className="mx-2"> | </span>
                                     <Link to={"/termos-de-uso"} className="text-primary">Termos de Uso</Link>
