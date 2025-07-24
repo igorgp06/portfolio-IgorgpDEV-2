@@ -3,6 +3,7 @@ import { cn } from "../../../lib/utils";
 import { useToast } from "../../../hooks/use-toast";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
+import { Link } from "react-router-dom";
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
@@ -191,6 +192,14 @@ export const Contact = () => {
                                 {isSubmitting ? "Enviando..." : "Enviar mensagem"}
                                 <SendIcon size={20} />
                             </button>
+
+                                <div className="mt-4 text-center text-muted-foreground text-sm politics">
+                                    <p>Ao enviar uma mensagem, voce concorda com:</p>
+                                    <Link to={"/politica-de-privacidade"} className="text-primary">Política de Privacidade</Link>
+                                    <span className="mx-2"> | </span>
+                                    <Link to={"/termos-de-uso"} className="text-primary">Termos de Uso</Link>
+                                </div>
+
                         </form>
                     </div>
                 </div>
