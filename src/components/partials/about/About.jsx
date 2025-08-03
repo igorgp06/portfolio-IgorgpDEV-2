@@ -13,19 +13,19 @@ export const About = () => {
                         <h3 className="text-2xl font-semibold">Desenvolvedor Web Freelancer</h3>
 
                         <p className="text-muted-foreground">
-                            Sou um desenvolvedor web freelancer com mais de 2 anos de experiência, sou especializado
-                            em criar sites, plataformar e aplicativos web responsivo, acessíveis, seguros e de alta
+                            Sou um desenvolvedor de sistemas freelancer com mais de 2 anos de experiência. Especialista
+                            em criar sites, plataformas e aplicativos web responsivos, acessíveis, seguros e de alta
                             performance com as mais recentes tecnologias do mercado.
                         </p>
 
                         <p className="text-muted-foreground">
-                            Tenho maestria em várias linguagens de programação para o desenvolvimento web, incluindo HTML5,
-                            CSS3, JavaScript, React, Tailwind, Bootstrap, Java, Spring, Python, PHP e Node.js além de
-                            diveras outras ferramentas para design e segurança de ponta a ponta.
+                            Tenho maestria em várias linguagens de programação para o desenvolvimento de sistmas, incluindo HTML5,
+                            CSS3, JavaScript, React, Tailwind, Java, Spring e Node.js além de
+                            diversas outras ferramentas para design, desenvolvimento e segurança de ponta a ponta.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                            <a href="/public/static/pdf/Igor Gonçalves curriculo.pdf" download={"curriculo-igor-goncalves.pdf"}
+                            <a href="/public/static/pdf/Igor-Goncalves-curriculo.pdf" download={"curriculo-igor-goncalves.pdf"}
                                 className="px-6 py-2 rounded-full border border-primary text-primary  hover:bg-primary/10 transition-colors duration-300">
                                 Baixe meu Currículo
                             </a>

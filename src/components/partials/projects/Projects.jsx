@@ -20,7 +20,7 @@ const projects = [
     {
         id: 3,
         title: "Tech Fix - Assistência Técnica",
-        desc: "Uma landing page de uma assistência técnica de celulares.",
+        desc: "Uma landing page de uma assistência técnica fictícia de celulares.",
         img: "/static/images/TechFix.png",
         tags: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind"],
         link: "https://assistencia-tecnica-omega.vercel.app/",
@@ -35,7 +35,7 @@ const projects = [
     },
     {
         id: 5,
-        title: "Java REST API,",
+        title: "Java REST API",
         desc: "Uma API feita com Java, Spring e H2 para o controle de departamentos e funcionários.",
         img: "/static/images/javaRestApi.png",
         tags: ["Java", "Spring", "H2 Database", "JPA"],
