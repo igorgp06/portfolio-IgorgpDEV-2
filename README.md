@@ -1,6 +1,6 @@
 # Uma nova versão do meu portfólio!
 
-Uma versão mais recente do meu portfólio, com animações 3D, melhorias na estrutura e melhorias na estilização.
+Uma versão mais recente do meu portfólio com novas animações, interatividade, melhorias de performance e responsividade.
 
 ## Controle Versional (GIT)
 
@@ -19,17 +19,6 @@ O projeto segue o seguinte padrão de sufixos:
 | [DEPLOY]  | Relacionado ao primeiro o deploy do projeto. Pode ser usado uma vez só.    |
 | [FINAL]   | Versão final do projeto, sem mais alterações e/ou remoções significativas. |
 
-## Lançamentos Futuros
-
-- Um mouse personalizado para o site junto com uma animação de rastro para ele.  
-- Interatividade com diversos elementos 3D presentes no site.   
-- Otimizações de SEO, carregamento e otimizações no geral.  
-- Animações do hover em diferentes elementos do site.
-
-## Bugs
-
-Problemas/Bugs encontrados ao decorrer do desenvolvimento do projeto serão listados aqui com o seu ID, uma breve descrição, a versão em que foi encontrado e em qual versão foi solucionado.
-
 ## Licença
 
 Este repositório e tudo derivado do mesmo, sendo código ou imagens, está sob uma licença personalizada que permite apenas a **visualização** do código.   
@@ -41,4 +30,5 @@ Para dúvidas, sugestões ou qualquer outra questão, envie um e-mail para: ouvi
 
 ## Desenvolvedor Responsável
 
-**[Igor Gonçalves | DEV](https://igdeveloper.com.br)** ou [**igorgp06**](https://github.com/igorgp06)
+Site do desenvolvedor: [Igor Gonçalves | DEV](https://igdeveloper.com.br)    
+GitHub do desenvolvedor: [igorgp06](https://github.com/igorgp06)    

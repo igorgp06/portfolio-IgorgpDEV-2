@@ -50,8 +50,8 @@ export const Navbar = () => {
                         href="#hero"
                         onClick={() => setIsMenuOpen(false)}
                     >
-                        <span className="relative z-10">
-                            <span className="text-glow text-foreground"> Igor Gonçalves </span>{" "}
+                        <span className="relative z-10 hover:text-glow transition-all duration-300">
+                            <span className="text-foreground"> Igor Gonçalves </span>{" "}
                             | DEV
                         </span>
                     </a>

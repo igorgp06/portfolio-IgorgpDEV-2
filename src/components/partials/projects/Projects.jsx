@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import { cn } from "../../../lib/utils";
 
 const projects = [
     {
@@ -6,7 +7,7 @@ const projects = [
         title: "Destinos do Kite",
         desc: "Um site de turismo que reune as informações sobre os melhores lugares para praticar kite surf.",
         img: "/static/images/DestinosdoKite.png",
-        tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+        tags: ["HTML5", "CSS3", "JavaScript", "Tailwind", "React", "Java", "Spring"],
         link: "https://destinosdokite.com.br",
     },
     {
@@ -97,11 +98,12 @@ export const Projects = () => {
                 <div className="text-center mt-12">
                     <a href="https://github.com/igorgp06"
                         target="_blank"
-                        className="cosmic-button hover-shadow-violet transition-colors duration-300">
+                        className={cn("inline-block p-1 text-1xl font-semibold cosmic-button text-primary-foreground",
+                            "rounded-md shadow-md border border-primary-foreground")}>
                         Veja meu GitHub para mais projetos!
                     </a>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }

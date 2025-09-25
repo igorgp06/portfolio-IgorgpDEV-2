@@ -10,10 +10,10 @@ export const About = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">Desenvolvedor Web Freelancer</h3>
+                        <h3 className="text-2xl font-semibold">Desenvolvedor Web </h3>
 
                         <p className="text-muted-foreground">
-                            Sou um desenvolvedor de sistemas freelancer com mais de 2 anos de experiência. Especialista
+                            Sou um desenvolvedor de sistemas  com mais de 2 anos de experiência. Especialista
                             em criar sites, plataformas e aplicativos web responsivos, acessíveis, seguros e de alta
                             performance com as mais recentes tecnologias do mercado.
                         </p>
@@ -45,7 +45,7 @@ export const About = () => {
                                 <div className="text-left">
                                     <h4 className="font-bold text-md">Desenvolvimento de Websites Sob Medida</h4>
                                     <p className="text-muted-foreground text-sm">
-                                        Criação de sites e sistemas personalizados 
+                                        Criação de sites e sistemas personalizados
                                         para atender às necessidades específicas do seu negócio.
                                     </p>
                                 </div>
