@@ -2,6 +2,10 @@
 
 Uma versão mais recente do meu portfólio com novas animações, interatividade, melhorias de performance e responsividade.
 
+> [!IMPORTANT]
+> O site ainda está hospedado na versão **5.2**.    
+> Ele será atualizado para as versões posteriores em breve. 
+
 ## Controle Versional (GIT)
 
 O projeto segue o seguinte padrão de sufixos:
