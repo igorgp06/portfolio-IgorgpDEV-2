@@ -7,7 +7,11 @@ export const Footer = () => {
             {" "}
             <p className="text-sm text-muted-foreground">
                 {" "}
-                &copy; {new Date().getFullYear()} Igor Gonçalves | DEV <br />Todos os direitos reservados.
+                &copy; {new Date().getFullYear()}{" "}
+                <a href="https://igdeveloper.com.br" target="_self" className="text-primary hover:text-glow transition-all duration-300">
+                    Igor Gonçalves | DEV
+                </a> <br />
+                Todos os direitos reservados.
             </p>
 
             <a href="#hero" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors duration-300">

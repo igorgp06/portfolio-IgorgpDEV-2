@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../../../lib/utils";
 
 const projects = [
     {
@@ -24,15 +24,15 @@ const projects = [
         desc: "Uma landing page de uma assistência técnica fictícia de celulares.",
         img: "/static/images/TechFix.png",
         tags: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind"],
-        link: "https://assistencia-tecnica-omega.vercel.app/",
+        link: "https://assistencia-tecnica-omega.vercel.app",
     },
     {
         id: 4,
-        title: "Meu Antigo Portfólio Pessoal",
+        title: "Antigo Portfólio Pessoal",
         desc: "Meu primeiro portfólio pessoal feito com HTML, CSS e JavaScript.",
         img: "/static/images/IgorPortfolio1.png",
         tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
-        link: "https://igdeveloper.com.br",
+        link: "https://igorgp06.github.io/portfolio-igorgpDEV/#services",
     },
     {
         id: 5,
@@ -68,9 +68,9 @@ export const Projects = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center justify-center align-center items-center">
                     {projects.map((project, key) => (
-                        <div key={key} className="gropu bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                        <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover ">
                             <div className="h-48 overflow-hidden">
-                                <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                <img src={project.img} alt={project.title} className="w-full h-full  rounded-lg object-cover transition-all duration-500 group-hover:scale-101 p-2" />
                             </div>
 
                             <div className="p-4 text-center justify-center align-center items-center">
@@ -98,8 +98,8 @@ export const Projects = () => {
                 <div className="text-center mt-12">
                     <a href="https://github.com/igorgp06"
                         target="_blank"
-                        className={cn("inline-block p-1 text-1xl font-semibold cosmic-button text-primary-foreground",
-                            "rounded-md shadow-md border border-primary-foreground")}>
+                        className={cn("inline-block p-2 text-1xl font-semibold cosmic-button text-primary-foreground",
+                            "rounded-full shadow-md border")}>
                         Veja meu GitHub para mais projetos!
                     </a>
                 </div>

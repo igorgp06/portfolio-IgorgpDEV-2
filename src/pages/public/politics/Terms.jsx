@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 export const Terms = () => {
     const lastUpdated = new Date().toLocaleDateString('pt-BR', {

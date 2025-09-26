@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Main } from "./pages/main/Main"
+import { Main } from "./pages/Main"
 import { NotFound } from "./pages/err/NotFound"
-import { Privacy } from "./pages/politics/Privacy"
-import { Terms } from "./pages/politics/Terms"
+import { Privacy } from "./pages/public/politics/Privacy"
+import { Terms } from "./pages/public/politics/Terms"
 import { Toaster } from "./components/ui/toaster"
 
 function App() {
   return (
     <>
-    <Toaster />
+      <Toaster />
       <BrowserRouter>
         <Routes>
           <Route index element={<Main />} />

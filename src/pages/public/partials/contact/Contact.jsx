@@ -1,6 +1,6 @@
 import { MailIcon, MapPin, SendIcon, PhoneCallIcon } from "lucide-react"
-import { cn } from "../../../lib/utils";
-import { useToast } from "../../../hooks/use-toast";
+import { cn } from "../../../../lib/utils";
+import { useToast } from "../../../../hooks/use-toast";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { Link } from "react-router-dom";
@@ -206,8 +206,7 @@ export const Contact = () => {
                                 <SendIcon size={20} />
                             </button>
 
-                                <div className="mt-4 text-center text-muted-foreground text-sm politics">
-                                    <p>Ao enviar uma mensagem, você concorda com:</p>
+                                <div className="mt-4 text-center text-muted-foreground text-sm politics flex flex-row justify-center items-center">
                                     <Link to={"/politica-de-privacidade"} className="text-primary">Política de Privacidade</Link>
                                     <span className="mx-2"> | </span>
                                     <Link to={"/termos-de-uso"} className="text-primary">Termos de Uso</Link>

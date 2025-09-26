@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../../../lib/utils";
 
 const skills = [
     { img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", name: "HTML", category: "frontend" },
@@ -47,7 +47,7 @@ export const Skills = () => {
                         <button key={key}
                             onClick={() => setActiveCategory(category)}
                             className={cn(
-                                "px-4 py-2 rounded-full transition-colors duration-300 capitalize",
+                                "px-4 py-2 rounded-full transition-all duration-300 capitalize hover:scale-102 hover:shadow-primary/30",
                                 activeCategory === category
                                     ? "bg-primary text-primary-foreground"
                                     : "bg-secondary/70 text-card-foreground")}>
